@@ -1,0 +1,49 @@
+{
+  "name": "budget-tracker",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mcoypaco/budget-tracker.git"
+  },
+  "version": "0.0.0-development",
+  "private": true,
+  "type": "module",
+  "release": {
+    "branches": [
+      {
+        "name": "main"
+      },
+      {
+        "name": "beta",
+        "prerelease": true
+      }
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/git",
+      "@semantic-release/github",
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": false
+        }
+      ]
+    ]
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "semantic-release": "semantic-release"
+  },
+  "devDependencies": {
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.0.4",
+    "axios": "^1.1.2",
+    "laravel-vite-plugin": "^0.7.5",
+    "semantic-release": "^21.0.7",
+    "vite": "^4.0.0"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  }
+}
